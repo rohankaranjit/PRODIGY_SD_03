@@ -23,4 +23,13 @@ def add_contact(contacts):
     save_contacts(contacts)
     print(f"{name} added to contacts.")
 
+# Function to view all contacts
+def view_contacts(contacts):
+    if contacts:
+        print("Contacts:")
+        for name, contact in contacts.items():
+            print(f"Name: {name}, Phone: {contact['phone']}, Email: {contact['email']}")
+    else:
+        print("No contacts available.")
+
 
