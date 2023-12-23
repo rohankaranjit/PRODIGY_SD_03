@@ -32,4 +32,23 @@ def view_contacts(contacts):
     else:
         print("No contacts available.")
 
+# Function to edit a contact
+def edit_contact(contacts):
+    name = input("Enter the name of the contact to edit: ")
+    if name in contacts:
+        print(f"Editing {name}:")
+
+        phone = input("Enter new phone number (press Enter to keep existing): ")
+        email = input("Enter new email address (press Enter to keep existing): ")
+
+        if phone:
+            contacts[name]['phone'] = phone
+        if email:
+            contacts[name]['email'] = email
+
+        save_contacts(contacts)
+        print(f"{name}'s contact information updated.")
+    else:
+        print("Contact not found.")
+
 
