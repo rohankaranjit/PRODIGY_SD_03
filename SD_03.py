@@ -13,3 +13,14 @@ def save_contacts(contacts):
     with open('contacts.json', 'w') as file:
         json.dump(contacts, file, indent=4)
 
+# Function to add a new contact
+def add_contact(contacts):
+    name = input("Enter the name: ")
+    phone = input("Enter the phone number: ")
+    email = input("Enter the email address: ")
+
+    contacts[name] = {'phone': phone, 'email': email}
+    save_contacts(contacts)
+    print(f"{name} added to contacts.")
+
+
