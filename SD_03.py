@@ -50,5 +50,14 @@ def edit_contact(contacts):
         print(f"{name}'s contact information updated.")
     else:
         print("Contact not found.")
+# Function to delete a contact
+def delete_contact(contacts):
+    name = input("Enter the name of the contact to delete: ")
+    if name in contacts:
+        del contacts[name]
+        save_contacts(contacts)
+        print(f"{name} deleted from contacts.")
+    else:
+        print("Contact not found.")
 
 
