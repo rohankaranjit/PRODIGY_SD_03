@@ -62,6 +62,29 @@ def delete_contact(contacts):
         # Main function to manage contacts
 def main():
     contacts = load_contacts()
+    while True:
+        print("\nContact Manager")
+        print("1. Add a contact")
+        print("2. View contacts")
+        print("3. Edit a contact")
+        print("4. Delete a contact")
+        print("5. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            add_contact(contacts)
+        elif choice == '2':
+            view_contacts(contacts)
+        elif choice == '3':
+            edit_contact(contacts)
+        elif choice == '4':
+            delete_contact(contacts)
+        elif choice == '5':
+            print("Exiting Contact Manager.")
+            break
+        else:
+            print("Invalid choice. Please enter a valid option.")
 
 
 
