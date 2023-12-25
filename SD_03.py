@@ -59,5 +59,10 @@ def delete_contact(contacts):
         print(f"{name} deleted from contacts.")
     else:
         print("Contact not found.")
+        # Main function to manage contacts
+def main():
+    contacts = load_contacts()
+
+
 
 
