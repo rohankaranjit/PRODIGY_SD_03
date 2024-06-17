@@ -1,6 +1,5 @@
 
 
-
 import json
 # Function to load contacts from a file
 def load_contacts():
